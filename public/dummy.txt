@@ -1,0 +1,5 @@
+1. while (parentElement.firstChild){
+    parentElement.remove(parentElement.firstChild)
+}
+
+2. parentElement.innerHtml=''

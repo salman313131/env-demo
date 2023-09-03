@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.main-header-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 15px;
+    border-bottom: 2px solid #777;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 5px 5px;
+}
+
+.main-header-nav ul {
+    list-style-type: none;
+    display: flex;
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header-nav li {
+    margin: 0 20px;
+}
+
+.main-header-nav a.active {
+    color: #6495c9;
+}
+
+.main-header-nav li:last-child {
+    margin-right: 15px;
+}
+
+.main-header-nav a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.main-header-nav a:hover {
+    padding: 15px;
+    background-color: none;
+    font-size: x-large;
+}
+
+.daily_container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.daily_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+/* Style the boxes inside the container */
+.daily_center-box {
+    flex: 1;
+    width: max-content;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the input element */
+#selectDate {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the headings */
+.daily_center-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Style the lists */
+.daily_center-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style list items */
+.daily_center-box li {
+    margin-bottom: 5px;
+}
+
+/* Style the totals */
+#income_total,
+#expenditure_total {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.myForm_daily {
+    flex: 1;
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.myForm_daily div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="date"],
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .daily_container {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header-nav {
+        flex-direction: column;
+    }
+
+    .main-header-nav ul {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .main-header-nav li {
+        margin: 10px 0;
+    }
+
+    .daily_center-box,
+    .myForm_daily {
+        padding: 15px;
+    }
+
+    input[type="date"],
+    select,
+    input[type="number"] {
+        padding: 5px;
+    }
+
+    button[type="submit"] {
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="main-header-nav">
+        <ul>
+            <li><a href="daily" id="dailyLink">Daily</a></li>
+            <li><a href="monthly" id="monthlyLink">Monthly</a></li>
+            <li><a href="yearly" id="yearlyLink">Yearly</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="daily_container" id="daily">
+        <div class="column daily_center">
+            <div class="daily_center-box">
+                <input type="date" id="selectDate" name="selectDate">
+            </div>
+            <div class="daily_center-box">
+                <h3>Income List</h3>
+                <ul id="income_list">
+                </ul>
+                <div>
+                    <h3 id="income_total"></h3>
+                </div>
+            </div>
+            <div class="daily_center-box">
+                <h3>Expenditure List</h3>
+                <ul id="expenditure_list">
+                </ul>
+                <h3 id="expenditure_total"></h3>
+            </div>
+        </div>
+        <div class="column">
+        
+            <div class="daily_center-box">
+        
+                <form id="myForm" class="myForm_daily">
+                    <div>
+                        <label for="datePicker">Select a Date:</label>
+                        <input type="date" id="datePicker" name="datePicker">
+                    </div>
+                    <div>
+                        <label for="spending">Select type:</label>
+                        <select id="spending" name="spending">
+                            <option value="salary">Salary</option>
+                            <option value="spending">Spending</option>
+                        </select>
+                        <div id="subCategoryContainer">
+                            <label for="categorySelect">Category:</label>
+                            <select id="categorySelect" name="categorySelect">
+                            </select>
+                        </div>
+                        <label for="salSpe">Enter Amount</label>
+                        <input type="number" id="salSpe" name="salSpe">
+                    </div>
+                    <p id="hidden_message" style="display: none; color: green;">Data added successfully!!</p>
+                    <button type="submit">Submit</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <main id="monthly">
+        <div>
+            <select>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+            <select id="yearSelect"></select>
+            <button id="monthlyData">Get Data</button>
+        </div>
+    </main>
+    <main id="yearly">
+        <h1>Yearly page</h1>
+    </main>
+<script src="script.js"></script>
+</body>
+
+</html>
